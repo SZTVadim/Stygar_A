@@ -64,9 +64,9 @@ zoo.add_animal(cat1)
 print(zoo.get_animals_count())
 
 for animal in zoo.get_animals():
-    animal.make_sound()
+    animal_sound(animal)
 
-animal = Animal("Слон", 3)
+Animal = Animal("Слон", 3)
 # Получила ошибку, тк Animal это абстрактный класс
 # и содержит абстрактный метод
 # они нужны для наследования, а не создания объектов

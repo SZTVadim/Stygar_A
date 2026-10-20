@@ -4,4 +4,5 @@ def find_log_entries(log_type):
             if log_type in line:
                 print(line)
 
+
 find_log_entries("ERROR")

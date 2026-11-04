@@ -2,10 +2,7 @@ import requests
 
 
 def test_post_pet():
-    response = requests.post(
-    "https://petstore.swagger.io/v2/pet",
-        json={"name": "cat"}
-    )
+    response = requests.post("https://petstore.swagger.io/v2/pet", json={"name": "cat"})
     print(response.status_code)
     print(response.json())
     assert response.status_code == 200
@@ -20,10 +17,7 @@ def test_get_pet(pet_id):
 
 
 def test_put_pet(pet_id):
-    response = requests.put(
-    "https://petstore.swagger.io/v2/pet",
-        json={"id": pet_id, "name": "cat_doggie"}
-    )
+    response = requests.put("https://petstore.swagger.io/v2/pet", json={"id": pet_id, "name": "cat_doggie"})
     print(response.status_code)
     print(response.json())
     assert response.status_code == 200
